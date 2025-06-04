@@ -59,9 +59,8 @@ section {
     align-items: center;
     padding: 1.5rem 4rem;
     z-index: 999;
-        padding: 2.5rem 4rem; /* Yüksekliği artırmak için bu satır değişti */
-
-            background-color: rgba(19, 19, 19, 0.7); /* varsayılan siyahmsı bir renk, %70 opak */
+        padding: 2.5rem 4rem; 
+            background-color: rgba(19, 19, 19, 0.7); 
 
 
 }
