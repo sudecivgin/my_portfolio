@@ -359,6 +359,7 @@ text-decoration: none;
     background-color: var(--second-bg-color);
     padding: 100px 15px;
     margin-bottom: 25px;
+    
   
     
 }
@@ -433,7 +434,7 @@ text-decoration: none;
 }
 
 .timeline-content{
-    background-color:  var(--bg-color);
+    background-color:  var(--second-bg-color);
     border: 3px solid var(--main-color);
     padding: 30px 50px;
     border-radius: 4rem;
@@ -472,6 +473,8 @@ text-decoration: none;
 
     background-color: var(--second-bg-color);
     color: azure;
+    padding: buttom 7rem;
+
 
 }
 .services h2{
@@ -569,14 +572,306 @@ text-decoration: none;
     font-size: 3rem;
     font-weight: 600;
     line: height 3px;
-
-
 }
+
 .services-info p{
     font-size: 2rem;
     font-weight:500;
     max-height: 120px;
     margin: auto;
     line-height: 1.6;
+}
+
+/*roadmap*/
+
+.testimonials {
+  background-color: var(--second-bg-color);
+}
+
+.testimonials-box{
+background-size: cover;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+}
+
+.testimonials-box img {
+    width: 15rem;
+    border-radius: 50%;
+    box-shadow: 0 0 25px var(#ffffff5c)
+}
+
+.testimonial-item h2 {
+  font-size: 2rem; /* İstediğin büyüklük */
+  font-weight: bold; /* Daha belirgin yapmak için */
+  margin-bottom: 0.5rem; /* İstersen alt boşluk */
+}
+
+
+
+
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  overflow-x: auto;
+  padding: 2rem 1rem;
+  scroll-snap-type: x mandatory;
+  width: 100%;
+    align-items: stretch;   
+
+}
+
+.testimonial-item {
+  flex: 0 0 auto;
+  width: 250px;
+  background-color: var(--second-bg-color);
+  border: 3px solid var(--second-bg-color);
+  border-radius: 2rem;
+  padding: 50px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+  scroll-snap-align: start;
+  height: 100%; /* Yüksekliği kapsayıcıya göre ayarla */
+
+}
+
+.testimonial-item p {
+    overflow: visible;
+    white-space: normal;
+    font-size:15px;
+}
+
+
+.testimonial-item img {
+  height: 100px;
+  object-fit: contain;
+  border-radius: 1rem;
+  display: flex;          /* Yatayda yan yana diz */
+
+
+  width: auto;      /* Oranı koruyarak genişlik ayarla */
+  
+}
+
+.scroll-btn {
+  position: absolute;
+  top: 65%;
+  transform: translateY(-50%);
+  background-color: azure;
+  color: black; /* buton içeriği beyazsa görünmez olabilir */
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.8rem;
+  cursor: pointer;
+  z-index: 10;
+  opacity: 20;
+
+    margin: 0 15px; /* Butonlar arasına boşluk */
+
+  /* margin-top kaldırıldı */
+}
+
+.scroll-btn.left {
+  left: -35px; /* sabit ve net bir mesafe */
+}
+
+.scroll-btn.right {
+  right: 20px; /* sabit ve net bir mesafe */
+}
+
+
+/* scroll çubuğunu gizle */
+.wrapper {
+  scrollbar-width: none; /* Firefox */
+}
+
+.wrapper::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
+/* container'a göre butonları konumla */
+.testimonials-box {
+  position: relative;
+  width: 100%;
+}
+
+.rating{
+    font-size: 15px;
+}
+
+/* Mobil uyumluluk */
+@media (max-width: 1200px) {
+    .wrapper {
+        grid-template-columns: repeat(2, 1fr); /* 2'li sırala */
+    }
+}
+@media (max-width: 768px) {
+    .wrapper {
+        grid-template-columns: 1fr; /* Tek sütun */
+    }
+}
+
+
+/*contact*/
+
+.contect{
+    background-color: var(--second-bg-color)
+
+}
+.contect form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    margin: 5rem auto;
+    text-align: center;
+
+}
+
+.contact form .input-box{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+.contact form .input-box input,
+    .contact form textarea {
+        width: 100%;
+        padding: 2.5rem;
+        font-size: 1.8rem;
+        color: var(--text-color);
+        background-color: var(--second-bg-color);
+        border-radius: 2rem;
+        border: 2px solid var(--main-color);
+        margin: 1.5rem 0;
+        resize: none;
+
+    }
+
+input[type="number"]
+::-webkit-inner-spin-button,
+input[type="number"]
+::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+ margin: 0;
+}
+
+input[type ="number"]{
+    -moz-appearance: textfield;
+
+}
+
+.footer{
+    position: relative;
+    bottom: 0;
+    width:100%;
+    padding:40px 0 ;
+    background-color: var(--second-bg-color);
+}
+.footer .social{
+    text-align: center;
+    padding-bottom: 25px;
+    color: var(--bg-color);
+
+}
+
+.footer .social a{
+    font-size: 25px;
+    color: var(--main-color);
+    border: 42px solid var(--second-bg-color);
+    width: 42px;
+    height: 42px;
+    line-height: 42px ;
+    display: inline-block;
+text-align: center;
+border-radius: 50%;
+margin: 0 10px;
+transition: 0.1s ease-in-out;
+
+
+}
+
+.footer .social a:hover{
+    transform: scale(1.2) translateY(-10px);
+    background-color: var(--main-color);
+    color: black;
+    box-shadow: 0 0 25px var(--main-color);
+
+
+}
+
+.footer ul{
+margin-top: 0;
+padding: 0;
+font-size: 18px;
+line-height:1.6;
+margin-bottom:0;
+text-align: center;
+
+
+
+}
+
+
+.footer ul li a { 
+    color: azure;
+    border-bottom: 3px solid transparent;
+    transition: 0.3s ease-in-out;
+}
+
+.footer ul li a:hover{ 
+border-bottom: 3px solid var(--main-color);
+color: antiquewhite;
+
+}
+
+.footer ul li{
+    display: inline-block;
+    padding: 0 15px;
+}
+
+
+
+
+@media(max-width:1285){
+body{
+    backround-color: purple;
+!important;
+
+}
+}
+
+
+.services-container{
+    padding-bottom: 7rem;
+    grid-template-columns: 
+
+
+
+
+
+    
+@media(max-width:1285){
+body {
+    backround-color:var(var(min-content))
+!important;
+
+}
+
+@media(max-width:991px){
+body{
+    backround-color: rgb(128, 59, 128);
+!important;
 
 }
