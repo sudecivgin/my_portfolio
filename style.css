@@ -603,9 +603,9 @@ flex-direction: column;
 }
 
 .testimonial-item h2 {
-  font-size: 2rem; /* İstediğin büyüklük */
-  font-weight: bold; /* Daha belirgin yapmak için */
-  margin-bottom: 0.5rem; /* İstersen alt boşluk */
+  font-size: 2rem; 
+  font-weight: bold; 
+  margin-bottom: 0.5rem; 
 }
 
 
@@ -639,7 +639,7 @@ flex-direction: column;
   text-align: center;
   gap: 1rem;
   scroll-snap-align: start;
-  height: 100%; /* Yüksekliği kapsayıcıya göre ayarla */
+  height: 100%; 
 
 }
 
@@ -654,10 +654,10 @@ flex-direction: column;
   height: 100px;
   object-fit: contain;
   border-radius: 1rem;
-  display: flex;          /* Yatayda yan yana diz */
+  display: flex;        
 
 
-  width: auto;      /* Oranı koruyarak genişlik ayarla */
+  width: auto;     
   
 }
 
@@ -666,7 +666,7 @@ flex-direction: column;
   top: 65%;
   transform: translateY(-50%);
   background-color: azure;
-  color: black; /* buton içeriği beyazsa görünmez olabilir */
+  color: black;
   border: none;
   border-radius: 50%;
   width: 40px;
@@ -676,30 +676,28 @@ flex-direction: column;
   z-index: 10;
   opacity: 20;
 
-    margin: 0 15px; /* Butonlar arasına boşluk */
+    margin: 0 15px; 
 
-  /* margin-top kaldırıldı */
+
 }
 
 .scroll-btn.left {
-  left: -35px; /* sabit ve net bir mesafe */
+  left: -35px; 
 }
 
 .scroll-btn.right {
-  right: 20px; /* sabit ve net bir mesafe */
+  right: 20px; 
 }
 
 
-/* scroll çubuğunu gizle */
+
 .wrapper {
-  scrollbar-width: none; /* Firefox */
+  scrollbar-width: none; 
 }
 
 .wrapper::-webkit-scrollbar {
-  display: none; /* Chrome, Safari */
+  display: none; 
 }
-
-/* container'a göre butonları konumla */
 .testimonials-box {
   position: relative;
   width: 100%;
@@ -709,139 +707,69 @@ flex-direction: column;
     font-size: 15px;
 }
 
-/* Mobil uyumluluk */
 @media (max-width: 1200px) {
     .wrapper {
-        grid-template-columns: repeat(2, 1fr); /* 2'li sırala */
+        grid-template-columns: repeat(2, 1fr); 
     }
 }
 @media (max-width: 768px) {
     .wrapper {
-        grid-template-columns: 1fr; /* Tek sütun */
+        grid-template-columns: 1fr; 
     }
 }
 
+/* Contact Section */
 
-/*contact*/
-
-.contect{
-    background-color: var(--second-bg-color)
-
-}
-.contect form{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 3rem;
-    margin: 5rem auto;
-    text-align: center;
-
-}
-
-.contact form .input-box{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-
-}
-
-.contact form .input-box input,
-    .contact form textarea {
-        width: 100%;
-        padding: 2.5rem;
-        font-size: 1.8rem;
-        color: var(--text-color);
-        background-color: var(--second-bg-color);
-        border-radius: 2rem;
-        border: 2px solid var(--main-color);
-        margin: 1.5rem 0;
-        resize: none;
-
-    }
-
-input[type="number"]
-::-webkit-inner-spin-button,
-input[type="number"]
-::-webkit-outer-spin-button {
-    -webkit-appearance: none;
- margin: 0;
-}
-
-input[type ="number"]{
-    -moz-appearance: textfield;
-
-}
-
-.footer{
-    position: relative;
-    bottom: 0;
-    width:100%;
-    padding:40px 0 ;
+.contact {
     background-color: var(--second-bg-color);
+    padding: 5rem 2rem;
 }
-.footer .social{
+
+.contact form {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
     text-align: center;
-    padding-bottom: 25px;
-    color: var(--bg-color);
+        gap: 2rem;
 
 }
 
-.footer .social a{
-    font-size: 25px;
-    color: var(--main-color);
-    border: 42px solid var(--second-bg-color);
-    width: 42px;
-    height: 42px;
-    line-height: 42px ;
-    display: inline-block;
-text-align: center;
-border-radius: 50%;
-margin: 0 10px;
-transition: 0.1s ease-in-out;
-
-
+.contact .input-box {
+    display: flex;
+    gap: 2rem;
 }
 
-.footer .social a:hover{
-    transform: scale(1.2) translateY(-10px);
-    background-color: var(--main-color);
-    color: black;
-    box-shadow: 0 0 25px var(--main-color);
-
-
+.contact .input-box input,
+.contact textarea {
+    width: 100%;
+    padding: 1.2rem 1.5rem;
+    font-size: 1.4rem;
+    color: var(--text-color);
+    background-color: var(--second-bg-color);
+    border-radius: 1rem;
+    border: 1px solid var(--main-color);
+    resize: none;
+    outline: none;
+    transition: 0.3s ease;
 }
 
-.footer ul{
-margin-top: 0;
-padding: 0;
-font-size: 18px;
-line-height:1.6;
-margin-bottom:0;
-text-align: center;
-
-
-
+.contact .input-box input:focus,
+.contact textarea:focus {
+    box-shadow: 0 0 5px var(--main-color);
 }
 
-
-.footer ul li a { 
-    color: azure;
-    border-bottom: 3px solid transparent;
-    transition: 0.3s ease-in-out;
+/* Number input buttonları gizleme */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
 
-.footer ul li a:hover{ 
-border-bottom: 3px solid var(--main-color);
-color: antiquewhite;
-
+input[type="number"] {
+    -moz-appearance: textfield;
 }
-
-.footer ul li{
-    display: inline-block;
-    padding: 0 15px;
-}
-
-
 
 
 @media(max-width:1285){
@@ -857,21 +785,196 @@ body{
     padding-bottom: 7rem;
     grid-template-columns: 
 
+}
 
 
+/*FOOOTER*/
 
+.footer{
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    padding: 40px 0;
+    background-color: var(--bg-color);
 
-    
-@media(max-width:1285){
-body {
-    backround-color:var(var(min-content))
-!important;
 
 }
+.footer .social {
+    text-align: center;
+    padding-bottom: 25px;
+    color: var(--main-color);
+
+
+
+}
+.footer .social a{
+    font-size: 25px;
+    color: var(--main-color);
+    border: 2px solid var(--main-color);
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    margin: 0 10px;
+    transition: 0.3s ease-in-out;
+
+}
+.footer .social a:hover{
+    transform: scale(1.5) translate(-10px);
+    background-color: var(--main-color);
+    color:azure ;
+    box-shadow: 0 0 25px var(--main-color);
+
+}
+.footer ul{
+    margin-top: 0;
+    padding: 0;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 0;
+    text-align: center;
+
+}
+.footer ul li a{
+    color: azure;
+    border-bottom: 3px solid transparent;
+    transition: 0.3s ease-in-out;
+
+}
+
+.footer ul li a:hover{
+    border-bottom: 3px solid var(--main-color);
+    color: var(--main-color);
+
+}
+
+.footer ul li{
+    display: inline-block;
+    padding: 0 15px;
+
+}
+
+@media(max-width:1285){
+    html{
+        font-size: 55%;
+    }
+
+
+    .services-container{
+        padding-bottom: 7rem;
+        grid-template-columns: repeat(2.1fr);
+        margin: 0 5rem;
+        background-color: var(--second-bg-color)
+        !important;
+    }
+
+}
+
 
 @media(max-width:991px){
-body{
-    backround-color: rgb(128, 59, 128);
-!important;
+header{
+    padding: 2rem 3%;
 
 }
+
+
+section {
+    padding: 10rem 3% 3rem;
+
+}
+}
+
+.testimonial-items::before{
+    left: 7px;
+
+}
+
+.timeline-item:nth-child(add){
+    padding-right: 0;
+    text-align: left;
+    
+}
+.timeline-item:nth-child(add),
+.timeline-item:nth-child(even) {
+    padding: left 37px; 
+}
+
+.timeline-dot{
+    left: 0;
+}
+
+.services{
+    padding-bottom: 7rem;
+
+}
+.testimonials.wrapper{
+    grid-template-columns:repeat(1,1fr);
+
+}
+.contact from{
+    flex-direction: column;
+
+}
+.footer{
+    padding: 2rem 3%;
+}
+
+ @media (max-width: 895px) {
+
+    .menu-icon{
+        display:block ;
+        cursor: pointer;
+
+    }
+
+.Home {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 50%;
+    padding: 1rem 3%;
+    background-color: var(--second-bg-color);
+    border-bottom-left-radius: 2rem;
+    border-left: 2px solid var(--main-color);
+    border-bottom: 2px solid var(--main-color);
+    z-index: 99;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .Home {
+        width: 100%;
+        left: 0;
+        right: 0;
+        border-radius: 0 0 2rem 2rem;
+        border-left: none;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+}
+
+
+    .navbar{
+        position: absolute;
+        top: 100%;
+        right: 0;
+    width: 50%;
+    padding: 1rem 3%;
+    background-color: var(--second-bg-color);
+    border-bottom-left-radius: 2rem;
+    border-left: 2px solid var(--main-color);
+    border-bottom: 2px solif var(--main-color);
+    
+    }
+
+    .navbar a{
+        display: none;
+    font-size: 2rem;
+    margin: 3rem 0;
+    color: azure;
+    }
+
+ }
