@@ -9,31 +9,32 @@
     <link rel="stylesheet" href="style.css">
 
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+     
 
 </head>
 <body>
 
+
+
 <header class="header">
     <a href="#home" class="logo">Sude's <span> Diary </span> </a>
 
-<i class='bx bx-menu-alt-left' id="menu-icon"></i>
-
-
-
+<i class='bx bx-menu' id="menu-icon"></i>
 
 <nav class="navbar">
-
-    
-<a href="#home" class="active" >Home</a>
-<a href="#education"class>Education</a>
-<a href="#services" class>Services</a>
-<a href="#roadmap" class>RoadMap</a>
-<a href="#contact"class>Contact</a>
-
+  <a href="#home" class="active">Home</a>
+  <a href="#Education">Education</a>
+  <a href="#Services">Services</a>
+  <a href="#testimonials">RoadMap</a> 
+  <a href="#contact">Contact</a>
 </nav>
+
 </header>
 
-<section class="Home" id="Home">
+
+<!--home-->
+
+<section class="Home" id="home">
 
 <div class="Home-content">
 <h1>Hi! I'm Sude</h1>
@@ -45,25 +46,35 @@ Music, in particular, has an important place in my life and I love it so much th
 Writing, blogging and putting my thoughts into words is also one of the things I enjoy the most!!
 </p>
 
+
+
 <div class="social-icons">
+  <a href="https://www.instagram.com/sude._.civgin/" target="_blank">
+    <i class='bx bxl-instagram'></i>
+  </a>
 
-    <a href="a" target="_blank"><i class='bx bxl-instagram'></i></a>
-  <a href="a" target="_blank"><i class='bx bxl-twitter' ></i></a>
+  <a href="https://github.com/sudecivgin" target="_blank">
+<i class='bx bxl-github'></i>
 
- <a href="a" target="_blank"><i class='bx bxl-linkedin' ></i></a>
 
+  <a href="https://www.linkedin.com/in/sude-civgin-964751297/" target="_blank">
+    <i class='bx bxl-linkedin'></i>
+  </a>
 </div>
+
 
 <div class="btn-group">
-    <a href=a class="btn">CV</a>
-    <a href=a class="btn">Contact</a>
 
+  <a href="cv.pdf" class="btn" target="_blank">CV</a>
+  <a href="#contact" class="btn">Contact</a>
 </div>
 
 </div>
 
+</div>
 
-<div class="Home-ing">
+
+<div class="Home-img">
     <img src="img/profill.png" alt="">
 </div>
 
@@ -90,10 +101,7 @@ This process contributed to the development of my written expression skills and 
                 </div>
             </div>
 
-
-    
-
-
+            
  <div class="timeline-item">
             <div class="timeline-dot"></div>
                 <div class="timeline-date">2018 - 2022</div>
@@ -160,7 +168,6 @@ This process contributed to the development of my written expression skills and 
   <div class="testimonials-box">
     <h2 class="heading">ROADMAP</h2>
 
-    <!-- Sol ok butonu wrapper dışında -->
     <button class="scroll-btn left" onclick="scrollTestimonials('left')">&#10094;</button>
 
     <div class="wrapper" id="testimonial-wrapper">
@@ -279,32 +286,32 @@ This process contributed to the development of my written expression skills and 
       </div>
     </div>
 
-    <!-- Sağ ok butonu wrapper dışında -->
     <button class="scroll-btn right" onclick="scrollTestimonials('right')">&#10095;</button>
   </div>
 </section>
 
 
+
+
 <!-- Contact -->
+
+
 <section class="contact" id="contact">
   <h2 class="heading">CONTACT</h2>
 
-  <form action="#">
-    <!-- İlk Satır: İsim & E-posta -->
+  <form action="https://formspree.io/f/xwpbogdp" method="POST">
     <div class="input-box">
-      <input type="text" placeholder="Name" required />
-      <input type="email" placeholder="E-posta" required />
+      <input type="text" name="name" placeholder="Name" required />
+      <input type="email" name="email" placeholder="E-posta" required />
     </div>
 
-    <!-- İkinci Satır: Telefon & Konu -->
     <div class="input-box">
-      <input type="text" placeholder="Phone Number" required />
-      <input type="text" placeholder="Subject" required />
+      <input type="text" name="phone" placeholder="Phone Number" required />
+      <input type="text" name="subject" placeholder="Subject" required />
     </div>
 
-    <!-- Mesaj ve Buton -->
     <div class="textarea-box">
-      <textarea placeholder="Your Message" cols="30" rows="10" required></textarea>
+      <textarea name="message" placeholder="Your Message" cols="30" rows="10" required></textarea>
     </div>
 
     <div class="submit-box">
@@ -321,55 +328,37 @@ This process contributed to the development of my written expression skills and 
 
 
 
-
-
 <!--fooooootr-->
 
 <footer class="footer">
 <div class="social">
 
 
- <a href="a" target="_blank"><i class='bx bxl-instagram'></i></a>
-  <a href="a" target="_blank"><i class='bx bxl-twitter' ></i></a>
+  <a href="https://www.instagram.com/sude._.civgin/" target="_blank">
+    <i class='bx bxl-instagram'></i>
+  </a>
 
- <a href="a" target="_blank"><i class='bx bxl-linkedin' ></i></a>
+  <a href="https://github.com/sudecivgin" target="_blank">
+<i class='bx bxl-github'></i>
+
+
+  <a href="https://www.linkedin.com/in/sude-civgin-964751297/" target="_blank">
+    <i class='bx bxl-linkedin'></i>
+  </a>
+
 </div>
 
 
 
 
 <ul class="list">
-  <li class="#">
-
-<a href="#home">Home</a>
-  </li>
-
-
-  <li class="#">
-
-<a href="#education">Education</a>
-  </li>
-
-  
-  <li class="#">
-
-<a href="#services">Services</a>
-  </li>
-
-  
-  <li class="#">
-
-<a href="#roadmap">Roadmap</a>
-  </li>
-
-
-
-  <li class="#">
-
-<a href="#contact">Conatact</a>
-  </li>
-
+  <li><a href="#home">Home</a></li>
+  <li><a href="#Education">Education</a></li>
+  <li><a href="#Services">Services</a></li>
+  <li><a href="#testimonials">RoadMap</a></li>
+  <li><a href="#contact">Contact</a></li> 
 </ul>
+
 </div>
 
 </footer>
@@ -378,7 +367,7 @@ This process contributed to the development of my written expression skills and 
 <script>
   function scrollTestimonials(direction) {
     const wrapper = document.getElementById('testimonial-wrapper');
-    const scrollAmount = 300; // piksel cinsinden kayma mesafesi
+    const scrollAmount = 300; 
 
     if (direction === 'left') {
       wrapper.scrollBy({
@@ -393,3 +382,5 @@ This process contributed to the development of my written expression skills and 
     }
   }
 </script>
+
+
